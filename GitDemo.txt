@@ -1,0 +1,112 @@
+http://learngitbranching.js.org/?NODEMO
+
+1 功能介紹
+* stage
+* commit
+* diff
+* checkout (all/onefile)
+* merge (conflict)
+* log
+
+頻繁開分支及進行commit(for log)
+
+2. 分支功能
+2-1. Local Usage
+
+git ci
+// 開始新需求
+git co -b feature1
+git ci 
+git ci
+// 突然接到更急的功能
+git co master
+git co -b priority
+git ci
+// 突然有一個線上bug要處理
+git co master
+git co -b bugFix // demo 
+undo
+git ci
+// 完成 bug修復，合併回master
+git rebase bugFix master
+git br -d bugFix
+// 繼續回priority開發
+git co priority
+git ci
+git ci
+// 改錯了 重設
+git revert
+git reset
+git ci
+// 急件完成要上線
+git rebase master priority
+git co master
+git diff priority 
+git merge priority
+// 回到原功能開發
+git co feature1
+git co -b feature2
+git ci
+git ci
+// 功能一要先部分上線
+git co master
+git cherry-pick C3 C4
+git br -d feature1
+// 繼續回新功能開發
+git co feature2
+git ci
+// 開發完成力測，但出現另一急件
+git co master
+git co -b urgent
+git ci
+git rebase urgent master
+//測試完完成後合併入主線
+git co feature2
+
+
+
+2-2. Remote Usage
+git clone
+// 開始新專案 在遠端開立新branch
+git co -b project
+git push origin project
+git fakeTeamwork project
+git ci
+// 出現bug要修復
+git co master
+git co -b bugFix
+git ci //測試
+git rebase bugFix master //本地測試並合併
+git push //推送至遠端
+// 回到專案開發，要將功能推送遠端與同事分享
+git co project
+git push
+git pull --rebase
+git push
+// 開發完成，併入主線
+git co master
+git merge project
+
+// 同時可能有其他功能在進行
+git co C5
+git co -b another
+gc
+gc
+gc
+git co master
+git merge another
+git push
+
+
+
+
+
+// push 上遠端 未來可做自動化部署
+
+
+
+
+
+ 
+ 
+ 
