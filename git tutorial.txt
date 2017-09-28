@@ -1,0 +1,22 @@
+﻿
+1. Git 提交
+  a. Stage
+  b. Commit  // Massage
+  c. Diff
+  
+2.  Git Branch
+  a. Checkout 
+  b. Merge
+  c. Rebase
+  d. Revert
+
+3. Remote
+  a. Fetch
+  b. Pull
+  c. Push (遠端提交不可修改，需先合併才能上傳)
+  
+  
+3. Other Features
+ a. Stash
+ b. Tag
+ c. Blame 
