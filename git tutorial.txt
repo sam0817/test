@@ -15,22 +15,27 @@
   a. Checkout 提取 (node, file)
   c. Conflict 衝突
   b. Merge 合併
-  c. Rebase 合併為同一條線
+  c. Rebase 調整提交順序
   d. Reset 重設 (hard rollback)
   e. Revert 還原 (soft rollback)
-  f. Cherry Pick 挑選
+  f. Cherry-Pick 挑選特定點
   
 
 3. Remote
   a. Fetch 取得遠端儲存庫
+    * 遠端為獨立倉儲，需人工合併本地端
   b. Pull (Fetch + Merge)
-  c. Push (遠端提交不可修改，需先合併才能上傳)
+    * --rebase
+  c. Push 
+    * 遠端被更新
+  d. rebase vs merge
+    * clean vs ugly
+	* origin vs modified
   
-  
-3. Other Features
- a. Stash
- b. Tag
- c. Blame 
+4. Other Features
+ a. Stash (打包)
+ b. Tag (commit alias only)
+ c. Blame (記錄)
  d. 相對指標 ~ ^
  
  
